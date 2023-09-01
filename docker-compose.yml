@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  nginx:
+    image: nginx
+    container_name: nginx-node-js
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
